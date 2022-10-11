@@ -4,5 +4,5 @@
 %>
 
 <html><body>
-Empresa " + nomeEmpresa + " cadastrada com sucesso!
+Empresa <% out.println(nomeEmpresa); %> cadastrada com sucesso!
 </body></html>	
