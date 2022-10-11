@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Banco {
 	private static List<Empresa> lista = new ArrayList<>();
-	
+
 	static {
 		Empresa empresa = new Empresa();
 		empresa.setNome("Alura");
@@ -14,7 +14,6 @@ public class Banco {
 		lista.add(empresa);
 		lista.add(empresa2);
 	}
-
 
 	public void adiciona(Empresa empresa) {
 		lista.add(empresa);
