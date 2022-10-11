@@ -19,18 +19,18 @@ public class listaEmpresaServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
-	Banco banco = new Banco();
-	List<Empresa> lista = banco.getEmpresas();
-	
-	PrintWriter out = response.getWriter();
-	out.println("<html><body>");
-	out.println("<ul>");
-	for (Empresa empresa : lista) {
-		out.print("<li>" + empresa.getNome() + "</li>");
-	}
-	out.println("</ul>");
-	out.println("</body></html>");
+
+		Banco banco = new Banco();
+		List<Empresa> lista = banco.getEmpresas();
+
+		PrintWriter out = response.getWriter();
+		out.println("<html><body>");
+		out.println("<ul>");
+		for (Empresa empresa : lista) {
+			out.print("<li>" + empresa.getNome() + "</li>");
+		}
+		out.println("</ul>");
+		out.println("</body></html>");
 
 	}
 
