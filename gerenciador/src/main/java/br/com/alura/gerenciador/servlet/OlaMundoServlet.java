@@ -22,6 +22,8 @@ public class OlaMundoServlet extends HttpServlet{
 		out.println("</body>");
 		out.println("</html>");
 		
+		System.out.println("O Servlet OiMundoServlet Foi Chamado");
+		
 	}
 	
 
