@@ -32,7 +32,7 @@ public class NovaEmpresaServlet extends HttpServlet {
 		RequestDispatcher rd = request.getRequestDispatcher("/novaEmpresaCriada.jsp");
 		request.setAttribute("empresa", empresa.getNome());
 		rd.forward(request, response);
-		
+
 	}
 
 }
