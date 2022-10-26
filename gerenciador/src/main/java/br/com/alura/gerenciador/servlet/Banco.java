@@ -13,6 +13,7 @@ public class Banco {
 		empresa2.setNome("Caelum");
 		lista.add(empresa);
 		lista.add(empresa2);
+		//Teste
 	}
 
 	public void adiciona(Empresa empresa) {
