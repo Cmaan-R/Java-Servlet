@@ -25,10 +25,6 @@ public class Banco {
 		Banco.lista.add(empresa);
 	}
 
-	public List<Empresa> getEmpresas() {
-		return Banco.lista;
-	}
-
 	public void removeEmpresa(Integer id) {
 
 		Iterator<Empresa> it = lista.iterator();
@@ -39,6 +35,20 @@ public class Banco {
 				it.remove();
 			}
 		}
+	}
+
+	public Empresa buscaEmpresaPeloId(Integer id) {
+		for (Empresa empresa : lista) {
+			if (empresa.getId() == id) {
+				return empresa;
+			}
+		}
+		return null;
+
+	}
+
+	public List<Empresa> getEmpresas() {
+		return Banco.lista;
 	}
 
 }
