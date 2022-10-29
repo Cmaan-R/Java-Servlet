@@ -32,10 +32,10 @@ public class UnicaEntradaServlet extends HttpServlet {
 			acao.executa(request, response);
 
 		} else if (paramAcao.equals("MostraEmpresa")) {
-			
+
 			MostraEmpresas acao = new MostraEmpresas();
-			acao.executa(request , response);
-			
+			acao.executa(request, response);
+
 		}
 
 	}
