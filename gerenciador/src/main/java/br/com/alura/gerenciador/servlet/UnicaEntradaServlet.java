@@ -23,30 +23,20 @@ public class UnicaEntradaServlet extends HttpServlet {
 		String paramAcao = request.getParameter("acao");
 
 		if (paramAcao.equals("ListaEmpresas")) {
-
 			ListaEmpresas acao = new ListaEmpresas();
 			acao.executa(request, response);
-
 		} else if (paramAcao.equals("RemoveEmpresas")) {
-
 			RemoveEmpresas acao = new RemoveEmpresas();
 			acao.executa(request, response);
-
 		} else if (paramAcao.equals("MostraEmpresas")) {
-
 			MostraEmpresas acao = new MostraEmpresas();
 			acao.executa(request, response);
-
 		} else if (paramAcao.equals("AlteraEmpresas")) {
-
 			AlteraEmpresas acao = new AlteraEmpresas();
 			acao.executa(request, response);
-
 		} else if (paramAcao.equals("NovaEmpresa")) {
-
 			NovaEmpresa acao = new NovaEmpresa();
 			acao.executa(request, response);
-
 		}
 
 	}
