@@ -24,7 +24,6 @@ public class ListaEmpresas {
 		request.setAttribute("empresas", lista);
 
 		return "forward:listaEmpresas.jsp";
-		//git
 	}
 
 }
