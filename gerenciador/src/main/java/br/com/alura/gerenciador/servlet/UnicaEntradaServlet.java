@@ -12,6 +12,7 @@ import br.com.alura.gerenciador.acao.AlteraEmpresas;
 import br.com.alura.gerenciador.acao.ListaEmpresas;
 import br.com.alura.gerenciador.acao.MostraEmpresas;
 import br.com.alura.gerenciador.acao.NovaEmpresa;
+import br.com.alura.gerenciador.acao.NovaEmpresaForm;
 import br.com.alura.gerenciador.acao.RemoveEmpresas;
 
 //@WebServlet("/entrada")
@@ -39,6 +40,9 @@ public class UnicaEntradaServlet extends HttpServlet {
 			nome = acao.executa(request, response);
 		} else if (paramAcao.equals("NovaEmpresa")) {
 			NovaEmpresa acao = new NovaEmpresa();
+			nome = acao.executa(request, response);
+		} else if (paramAcao.equals("NovaEmpresa")) {
+			NovaEmpresaForm acao = new NovaEmpresaForm();
 			nome = acao.executa(request, response);
 		}
 
