@@ -10,22 +10,22 @@ import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 
 @WebFilter("/entrada")
-public class MonitoramentoFilter implements Filter{
+public class MonitoramentoFilter implements Filter {
 
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
-		
+
 		long antes = System.currentTimeMillis();
-		
+
 		String acao = request.getParameter("acao");
-		
-		//Executa a Ação
+
+		// Executa a Ação
 		chain.doFilter(request, response);
-		
+
 		long depois = System.currentTimeMillis();
 		System.out.println("Tempo De Execução Da Ação " + acao + " -> " + (depois - antes));
-		
+
 	}
 
 }
