@@ -17,6 +17,7 @@ public class UnicaEntradaServlet extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+
 		String paramAcao = request.getParameter("acao");
 
 		HttpSession sessao = request.getSession();
