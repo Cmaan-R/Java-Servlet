@@ -17,14 +17,16 @@ public class UnicaEntradaServlet extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
+		String paramAcao = request.getParameter("acao");
+
 		HttpSession sessao = request.getSession();
 		boolean usuarioNaoEstaLogado = (sessao.getAttribute("usuarioLogado") == null);
-		if (usuarioNaoEstaLogado) {
-			response.sendRedirect("entrada?acao=LoginForm");
-		}
+		boolean ehUmaAcaoProtegida = !(paramAcao.equals("Login") || paramAcao.equals("LoginForm"));
 
-		String paramAcao = request.getParameter("acao");
+		if (ehUmaAcaoProtegida && usuarioNaoEstaLogado) {
+			response.sendRedirect("entrada?acao=LoginForm");
+			return;
+		}
 
 		String nomeDaClasse = "br.com.alura.gerenciador.acao" + paramAcao;
 
