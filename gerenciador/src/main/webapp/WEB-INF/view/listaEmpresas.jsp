@@ -12,11 +12,7 @@
 <title>Java Standard Taglib</title>
 </head>
 <body>
-	
-	<a href="entrada?acao=Logout">Sair</a>
-	<br>
-	<br> 
-	<br>
+	<c:import url="logout-parcial.jsp" />
 
 	Usuario Logado: ${usuarioLogado.login}
 	
