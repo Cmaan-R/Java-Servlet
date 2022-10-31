@@ -18,6 +18,8 @@ public class AutorizacaoFilter extends HttpFilter implements Filter {
 
 	public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain chain)
 			throws IOException, ServletException {
+		
+		System.out.println("AutorizacaoFilter");
 
 		HttpServletRequest request = (HttpServletRequest) servletRequest;
 		HttpServletResponse response = (HttpServletResponse) servletResponse;
@@ -32,6 +34,7 @@ public class AutorizacaoFilter extends HttpFilter implements Filter {
 			response.sendRedirect("entrada?acao=LoginForm");
 			return;
 		}
+		
 		chain.doFilter(request, response);
 	}
 
