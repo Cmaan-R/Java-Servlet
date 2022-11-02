@@ -22,7 +22,7 @@ public class EmpresasService extends HttpServlet {
 			throws ServletException, IOException {
 
 		List<Empresa> empresas = new Banco().getEmpresas();
-		
+
 		XStream xstream = new XStream();
 		String xml = xstream.toXML(empresas);
 
