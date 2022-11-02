@@ -28,7 +28,7 @@ public class EmpresasService extends HttpServlet {
 		
 		System.out.println(valor);
 
-		if (valor.endsWith("xml")) {
+		if (valor.contains("xml")) {
 
 			XStream xstream = new XStream();
 			xstream.alias("empresa", Empresa.class);
