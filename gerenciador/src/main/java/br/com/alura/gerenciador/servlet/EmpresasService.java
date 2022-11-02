@@ -24,7 +24,9 @@ public class EmpresasService extends HttpServlet {
 
 		List<Empresa> empresas = new Banco().getEmpresas();
 
-		String valor = request.getHeader("accept");
+		String valor = request.getHeader("Accept");
+		
+		System.out.println(valor);
 
 		if (valor.endsWith("xml")) {
 
