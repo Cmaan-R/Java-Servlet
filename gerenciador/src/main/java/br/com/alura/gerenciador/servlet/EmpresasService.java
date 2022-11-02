@@ -24,6 +24,7 @@ public class EmpresasService extends HttpServlet {
 		List<Empresa> empresas = new Banco().getEmpresas();
 
 		XStream xstream = new XStream();
+		xstream.alias("empresa", Empresa.class);
 		String xml = xstream.toXML(empresas);
 
 		response.setContentType("application/xml");
